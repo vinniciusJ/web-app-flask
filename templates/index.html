@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <title>Introdução ao Flask</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Introdução ao Flask</h1>
+
+        <p><strong>Contador: </strong> <span class="counter">0</span></p>
+
+        <button class="counterBtn">
+            Adicionar ao Contador
+        </button>
+    </main>
+
+    <script src="{{url_for('static', filename='js/index.js')}}" type="module"></script>
+</body>
+</html>

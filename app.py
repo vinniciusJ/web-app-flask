@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
+from database.ConnectionFactory import ConnectionFactory
 
 app = Flask(__name__)
+database = ConnectionFactory(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+from controllers import sellers
 
 if __name__ == '__main__':
     app.run(debug=True)
